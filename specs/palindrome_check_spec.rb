@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
+require 'pry'
 require_relative '../lib/palindrome_check'
 
 describe "palindrome" do
