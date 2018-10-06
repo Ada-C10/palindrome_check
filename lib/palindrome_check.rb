@@ -29,3 +29,8 @@ def palindrome_check(my_phrase)
 
   return true
 end
+
+# Time complexity: linear
+#  Given a string of length n, the time complexity is O(n). The string length is in direct proportion to the runtime.
+# Space complexity: linear
+#  Given a string of length n, the space complexity is O(n). The memory required for the string variable in the method is in direct proportion to the length of the given string.
