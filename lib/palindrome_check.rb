@@ -1,7 +1,5 @@
 # A method to check if the input string is a palindrome.
 # Return true if the string is a palindrome. Return false otherwise.
-require 'awesome_print'
-
 def palindrome_check(my_phrase)
 
   return false if my_phrase == nil
@@ -32,3 +30,8 @@ def palindrome_check(my_phrase)
 
   raise NotImplementedError
 end
+
+
+# Time complexity is linear, O(n) where n is the input of my_phrase.
+
+# Space complexity is constant, O(1). The storage of the variables remain the same regardless of the input size. 
