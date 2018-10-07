@@ -9,16 +9,16 @@ def palindrome_check(my_phrase)
   elsif my_phrase.length == 1
     return true
   else
-    x = 0
-    y = my_phrase.length - 1
+    x = find_start_index(my_phrase, 0)
+    y = find_ending_index(my_phrase, my_phrase.length - 1)
     start = my_phrase[x]
     ending = my_phrase[y]
 
     until x > y
       if start == ending
-        x = x + 1
+        x = find_start_index(my_phrase, x + 1)
         start = my_phrase[x]
-        y = y - 1
+        y = find_ending_index(my_phrase, y - 1)
         ending = my_phrase[y]
       else
         return false
@@ -30,5 +30,26 @@ def palindrome_check(my_phrase)
   # raise NotImplementedError
 end
 
-# test = palindrome_check("madam madam")
-# puts "#{test}"
+def find_start_index(my_phrase, index_val)
+  new_index = index_val
+
+  if my_phrase[new_index] == " "
+    until my_phrase[new_index] != " "
+      new_index += 1
+    end
+  end
+  return new_index
+end
+
+def find_ending_index(my_phrase, index_val)
+  new_index = index_val
+
+  if my_phrase[new_index] == " "
+    until my_phrase[new_index] != " "
+      new_index -= 1
+    end
+  end
+  return new_index
+end
+test = palindrome_check("   ma d   a m")
+puts "#{test}"

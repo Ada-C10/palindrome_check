@@ -47,22 +47,22 @@ describe "palindrome" do
       palindrome_check(test_string).must_equal true
     end
   #
-  #   it "palindrome with multiple spaces to ignore" do
-  #     test_string = " pull   up "
+    it "palindrome with multiple spaces to ignore" do
+      test_string = " pull   up "
+
+      palindrome_check(test_string).must_equal true
+    end
   #
-  #     palindrome_check(test_string).must_equal true
-  #   end
+    it "not a palindrome, with spaces" do
+      test_string = " not in  "
+
+      palindrome_check(test_string).must_equal false
+    end
   #
-  #   it "not a palindrome, with spaces" do
-  #     test_string = " not in  "
-  #
-  #     palindrome_check(test_string).must_equal false
-  #   end
-  #
-  #   it "single character is a palindrome" do
-  #     test_string = "A"
-  #
-  #     palindrome_check(test_string).must_equal true
-  #   end
+    it "single character is a palindrome" do
+      test_string = "A"
+
+      palindrome_check(test_string).must_equal true
+    end
   end
 end
