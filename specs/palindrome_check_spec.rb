@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/palindrome_check'
+require 'pry'
 
 describe "palindrome" do
   describe "basic tests" do
@@ -53,7 +54,6 @@ describe "palindrome" do
 
     it "not a palindrome, with spaces" do
       test_string = " not in  "
-
       palindrome_check(test_string).must_equal false
     end
 
