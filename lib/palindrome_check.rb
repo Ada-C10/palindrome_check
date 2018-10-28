@@ -28,29 +28,25 @@ def palindrome_check(my_phrase)
       return true
     end
   else #if its odd length
-    until i == j
-      if i == " "
-        i += 1
-      elsif j == " "
-        j -= 1
-      end
+    while i < j
       if my_phrase[i] == my_phrase[j] #changed this from a while to if
         i += 1
         j -= 1
-      elsif j == " "
+      elsif my_phrase[i] == " "
+        i += 1
+      elsif my_phrase[j] == " "
         j -= 1
       else
         return false
       end
-      return true
     end #end of until loop
+    return true
   end #end of if even or odd length
-
-
-
 end #end of method
 
-
+# " pull   up "
+#  i = 3
+#  j = 4
 
 
 
