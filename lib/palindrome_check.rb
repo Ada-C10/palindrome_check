@@ -33,7 +33,7 @@ def palindrome_check(my_phrase)
   i = 0
   while i < my_phrase.length
 
-    if temp_hash.include?my_phrase[i]
+    if temp_hash.key?my_phrase[i]
       temp_hash[my_phrase[i]] += 1
     else
       temp_hash[my_phrase[i]] = 1
