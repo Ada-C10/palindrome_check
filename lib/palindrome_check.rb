@@ -4,21 +4,22 @@
 require 'pry'
 
 #with array and string
-def palindrome_check(my_phrase)
-  return false if my_phrase == nil
-  return true if my_phrase.length <= 1
-  array = my_phrase.split(//)
-
-  temp_string = ""
-
-  array.each do |char|
-    if char != " "
-      temp_string += char
-    end
-  end
-
-  return temp_string == temp_string.reverse
-end
+# def palindrome_check(my_phrase)
+#   return false if my_phrase == nil
+#   return true if my_phrase.length <= 1
+#
+#   array = my_phrase.split(//)
+#
+#   temp_string = ""
+#
+#   array.each do |char|
+#     if char != " "
+#       temp_string += char
+#     end
+#   end
+#
+#   return temp_string == temp_string.reverse
+# end
 
 #with hashes
 def palindrome_check(my_phrase)
@@ -26,17 +27,21 @@ def palindrome_check(my_phrase)
   return false if my_phrase == nil
   return true if my_phrase.length <= 1
 
-  array = my_phrase.split(//)
+
   temp_hash = {}
 
-  array.each do |char|
+  i = 0
+  while i < my_phrase.length
 
-    if temp_hash.include?char
-      temp_hash["#{char}"] += 1
+    if temp_hash.include?my_phrase[i]
+      temp_hash[my_phrase[i]] += 1
     else
-      temp_hash["#{char}"] = 1
+      temp_hash[my_phrase[i]] = 1
     end
+
+    i += 1
   end
+
 
   odd_char = 0
 
