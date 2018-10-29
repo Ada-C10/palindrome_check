@@ -3,12 +3,24 @@
 
 require 'pry'
 
-# def palindrome_check(my_phrase)
-#   return false if my_phrase == nil
-#   return true if (my_phrase.length == 1 || my_phrase == "")
-#   return my_phrase == my_phrase.reverse
-# end
+#with array and string
+def palindrome_check(my_phrase)
+  return false if my_phrase == nil
+  return true if (my_phrase.length == 1 || my_phrase == "")
+  array = my_phrase.split(//)
 
+  temp_string = ""
+
+  array.each do |char|
+    if char != " "
+      temp_string += char
+    end
+  end
+
+  return temp_string == temp_string.reverse
+end
+
+#with hashes
 def palindrome_check(my_phrase)
 
   return false if my_phrase == nil
@@ -30,7 +42,7 @@ def palindrome_check(my_phrase)
 
   temp_hash.each do |key, value|
     if key != " " && value % 2 != 0
-      odd_char += 1 
+      odd_char += 1
     end
   end
 
