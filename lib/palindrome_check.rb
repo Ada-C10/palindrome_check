@@ -6,7 +6,7 @@ require 'pry'
 #with array and string
 def palindrome_check(my_phrase)
   return false if my_phrase == nil
-  return true if (my_phrase.length == 1 || my_phrase == "")
+  return true if my_phrase.length <= 1
   array = my_phrase.split(//)
 
   temp_string = ""
