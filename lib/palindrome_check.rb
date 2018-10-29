@@ -1,5 +1,8 @@
 # A method to check if the input string is a palindrome.
 # Return true if the string is a palindrome. Return false otherwise.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 def string_reverse(my_string)
   i = 0
   j = my_string.length - 1
@@ -16,7 +19,7 @@ end
 
 def palindrome_check(my_phrase)
   return false if my_phrase.nil?
-  
+
   my_phrase_original= []
   my_phrase_reversed = []
 
