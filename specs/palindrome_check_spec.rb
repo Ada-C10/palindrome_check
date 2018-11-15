@@ -46,12 +46,14 @@ describe "palindrome" do
     end
 
     it "palindrome with multiple spaces to ignore" do
+      skip
       test_string = " pull   up "
 
       palindrome_check(test_string).must_equal true
     end
 
     it "not a palindrome, with spaces" do
+      skip
       test_string = " not in  "
 
       palindrome_check(test_string).must_equal false
