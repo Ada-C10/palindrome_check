@@ -1,22 +1,28 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/palindrome_check'
+require 'pry'
 
 describe "palindrome" do
   describe "basic tests" do
     it "palindrome input with odd character count" do
+
       test_string = "madam"
+      # binding.pry
 
       palindrome_check(test_string).must_equal true
+
     end
 
     it "palindrome input with even character count" do
       test_string = "redder"
+      # binding.pry
 
       palindrome_check(test_string).must_equal true
     end
 
     it "not a palindrome" do
+
       test_string = "empty"
 
       palindrome_check(test_string).must_equal false
@@ -41,12 +47,14 @@ describe "palindrome" do
 
     it "palindrome with spaces to ignore" do
       test_string = "nurses run"
+      # binding.pry
 
       palindrome_check(test_string).must_equal true
     end
 
     it "palindrome with multiple spaces to ignore" do
       test_string = " pull   up "
+      # binding.pry
 
       palindrome_check(test_string).must_equal true
     end
