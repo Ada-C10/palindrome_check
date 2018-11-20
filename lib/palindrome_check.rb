@@ -16,10 +16,10 @@ def palindrome_check(my_phrase)
   j = my_phrase.length - 1 # index of the last character in my_phrase
   while i < j
     # account for ignoring white spaces
-    while my_phrase[i] == ' ' && i < j
+    while i < j && my_phrase[i] == ' '
       i += 1
     end
-    while my_phrase[j] == ' ' && i < j
+    while i < j && my_phrase[j] == ' '
       j -= 1
     end
 
