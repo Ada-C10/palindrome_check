@@ -1,6 +1,9 @@
 # A method to check if the input string is a palindrome.
 # Return true if the string is a palindrome. Return false otherwise.
-# Time complexity: O(n) where n is the length of my_phrase.
+# Time complexity: O(n) where n is the length of my_phrase. 
+#       Each character in the string which is a white space will be examined once (nested inner loop).
+#       Each character in the string which is not a white space will be examined twice.
+#             (first to compare with white space, next to compare with another non-white space character for equality.)
 # Space complexity: O(1) - auxiliary storage takes constant space as input size changes.
 def palindrome_check(my_phrase)
   # return false if nil - not a string
