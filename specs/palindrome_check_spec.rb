@@ -32,6 +32,12 @@ describe "palindrome" do
       palindrome_check(test_string).must_equal true
     end
 
+    it "string with only spaces reads the same backwards or forwards" do
+      test_string = "           "
+
+      palindrome_check(test_string).must_equal true
+    end
+
     # if the parameter is an object, check for nil
     it "nil object is not a string" do
       test_string = nil
