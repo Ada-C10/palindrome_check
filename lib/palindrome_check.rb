@@ -11,7 +11,7 @@ def palindrome_check(my_phrase)
         i += 1
       end
 
-      # iterate from trail of string until non whitespace char
+      # iterate from tail of string until non whitespace char
       until my_phrase[last] != ' ' # O(n/2)
         last -= 1
       end
